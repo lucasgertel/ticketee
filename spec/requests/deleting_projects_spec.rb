@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "Deleting Projects" do
   
   scenario "Deleting a project" do
-  	Factory(:project, name: 'TextMate2')
+  	FactoryGirl.create(:project, name: 'TextMate2')
   	visit '/'
   	click_link 'TextMate2'
   	click_link 'Delete Project'
