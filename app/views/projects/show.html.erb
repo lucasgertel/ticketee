@@ -1,5 +1,14 @@
 <% title(@project.name, "Projects") %>
 <%= @project.name %>
+
+<ul id='tickets'>
+	<% @project.tickets.each do |ticket| %>
+	<li>
+		#<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
+	</li>
+	<% end %>
+</ul>
+
 <%= link_to "Edit Project", edit_project_path(@project) %>
 <%= link_to "Delete Project", 
 		@project, 
