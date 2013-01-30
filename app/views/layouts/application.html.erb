@@ -16,6 +16,21 @@
 	<% flash.each do |key, value| %>
   	<%= content_tag(:div, value, class:"alert alert-#{key}") %>
   <% end %>
-	<%= yield %>
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#"><b>WT | </b>Tickets</a>
+          <ul class="nav"></ul>
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#">Projetos</a> 
+      </li>
+    </ul>
+    <%= yield %>
+  </div>
 </body>
 </html>

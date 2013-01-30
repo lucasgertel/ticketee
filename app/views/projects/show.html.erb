@@ -1,13 +1,23 @@
 <% title(@project.name, "Projects") %>
 <%= @project.name %>
 
-<ul id='tickets'>
-	<% @project.tickets.each do |ticket| %>
-	<li>
-		#<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
-	</li>
-	<% end %>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ticket Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @project.tickets.each do |ticket| %>
+  	<tr>
+      <td><%= ticket.id %></td>
+      <td><%= link_to ticket.title, [@project, ticket] %></td>
+    </tr>
+		<% end %>
+  </tbody>
+</table>
+
 
 <%= link_to "Edit Project", edit_project_path(@project) %>
 <%= link_to "Delete Project", 
