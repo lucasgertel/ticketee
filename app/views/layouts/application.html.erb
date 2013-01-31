@@ -16,7 +16,9 @@
 	<% flash.each do |key, value| %>
   	<%= content_tag(:div, value, class:"alert alert-#{key}") %>
   <% end %>
+  <nav>
+  <%= link_to 'Sign up', new_user_registration_path %>
+  </nav>
   <%= yield %>
-  </div>
 </body>
 </html>
