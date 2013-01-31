@@ -8,7 +8,7 @@ gem 'devise'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
-  gem 'rspec-rails', '2.11.0'  
+  gem 'rspec-rails' 
 end
 
 # Gems used only for assets and not required
@@ -21,8 +21,8 @@ end
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem "factory_girl_rails", "~> 4.0"
-  gem 'email_spec', '1.2.1'
+  gem "factory_girl_rails"
+  gem 'email_spec'
   # gem 'launchy', '2.1.0'
   # gem 'rb-fsevent', '0.9.1', :require => false
   # gem 'growl', '1.0.3'
