@@ -1,6 +1,9 @@
 class Admin::BaseController < ApplicationController
 	before_filter :authorize_admin!
 
+	def index
+	end
+
 	private
 		def authorize_admin!
 		  authenticate_user!
