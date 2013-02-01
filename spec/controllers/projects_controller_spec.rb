@@ -13,7 +13,7 @@ describe ProjectsController do
 		it "cannot access the new action" do
 			get :new
 			response.should redirect_to('/')
-			flash[:alert].should == 'You must be an admin to do that.'
+			flash[:alert].should == 'You must be an admin to do that'
 		end
 
 		{
@@ -27,7 +27,7 @@ describe ProjectsController do
 				sign_in(:user, user)
 				send(method, action, id: project.id)
 				response.should redirect_to(root_path)
-				flash[:alert].should == "You must be an admin to do that."
+				flash[:alert].should == "You must be an admin to do that"
 			end
 		end
 
